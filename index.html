@@ -1,11 +1,455 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trazza - Logística Inteligente en Lima</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="ph-fill ph-truck"></i>
+                <div class="logo-text">
+                    <span class="brand">TRAZZA</span>
+                    <span class="slogan">LOGÍSTICA<br>INTELIGENTE</span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#como-funciona">Cómo funciona</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#comparativa">Comparativa</a></li>
+                    <li><a href="#impacto">Impacto Verde</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="registro.html" class="btn btn-primary nav-btn"><i class="ph ph-truck"></i> Soy Transportista</a>
+                    <a href="registro.html" class="btn btn-secondary nav-btn"><i class="ph ph-package"></i> Soy Emprendedor</a>
+                    <a href="login.html" class="btn btn-icon" aria-label="Iniciar Sesión"><i class="ph ph-user"></i></a>
+                </div>
+            </div>
+            <button class="burger-menu" aria-label="Abrir menú"><i class="ph ph-list"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="tag-label">
+                    <i class="ph ph-sparkle"></i> Plataforma IA + IoT de Fletes de Retorno en Lima
+                </div>
+                <h1 class="hero-title">
+                    ¿Tu camión regresa <span>vacío?</span> o ¿<span>pagas fletes caros</span> sin contrato fijo?
+                </h1>
+                <p class="hero-desc">
+                    Conectamos transportistas con capacidad ociosa y microempresarios de Lima Metropolitana en tiempo real. Reduce hasta un <strong>30% en pérdidas operativas diarias</strong> mediante matching geolocalizado sin intermediarios.
+                </p>
+
+                <div class="toggle-container">
+                    <button class="toggle-btn active"><i class="ph ph-truck"></i> Soy Transportista</button>
+                    <button class="toggle-btn"><i class="ph ph-storefront"></i> Soy Emprendedor (Mype)</button>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="registro.html" class="btn btn-primary btn-large"><i class="ph ph-truck"></i> Registrar mi Camión y Rutas</a>
+                    <a href="registro.html" class="btn btn-outline btn-large"><i class="ph ph-calculator"></i> Cotizar Retorno Inmediato</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon green"><i class="ph ph-shield-check"></i></div>
+                        <div>
+                            <strong>+1,200 TRANSPORTISTAS</strong>
+                            <span>RUC y SOAT auditados</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon light-green"><i class="ph ph-percent"></i></div>
+                        <div>
+                            <strong>0% COMISIÓN OCULTA</strong>
+                            <span>Tarifas transparentes Mype</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon orange"><i class="ph ph-clock"></i></div>
+                        <div>
+                            <strong>MATCH EN < 14 MIN</strong>
+                            <span>Lima Norte, Centro y Sur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="app-mockup">
+                    <div class="mockup-header">
+                        <div class="dots"><span></span><span></span><span></span></div>
+                        <div class="mockup-title">TRAZZA Radar IoT • Lima Metropolitana</div>
+                        <div class="live-badge"><span class="dot"></span> Live GPS</div>
+                    </div>
+                    <div class="map-placeholder">
+                        <div class="route-box">
+                            <i class="ph ph-path"></i>
+                            <div>
+                                <strong>Corredor Panamericana</strong>
+                                <span>Lurín || San Martín de Porres</span>
+                            </div>
+                        </div>
+                        <div class="co2-badge"><i class="ph ph-leaf"></i> -28.4 kg CO₂ ahorrados</div>
+                    </div>
+                    <div class="mockup-card">
+                        <div class="card-header">
+                            <div class="ai-icon"><i class="ph-fill ph-robot"></i></div>
+                            <div class="ai-info">
+                                <strong>IA Matching Trazza v2.4</strong>
+                                <span>Retorno compatible detectado</span>
+                            </div>
+                            <div class="match-badge">98% Match</div>
+                        </div>
+                        <div class="card-details">
+                            <div class="detail">
+                                <span>Capacidad</span>
+                                <strong>3.5 Toneladas</strong>
+                            </div>
+                            <div class="detail">
+                                <span>Espacio Libre</span>
+                                <strong class="text-green">65% Tolva útil</strong>
+                            </div>
+                            <div class="detail">
+                                <span>Ahorro Estimado</span>
+                                <strong class="text-orange">S/. 185.00</strong>
+                            </div>
+                        </div>
+                        <hr class="divider">
+                        <div class="card-footer">
+                            <div class="driver-avatar">CM</div>
+                            <div class="driver-info">
+                                <strong>Furgón Isuzu 5T • Placa B7X-812</strong>
+                                <span>Conductor: Carlos M. (Calificación 4.9 ★)</span>
+                            </div>
+                            <div class="status-badge">Disponible Ahora</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cómo funciona Section -->
+    <section id="como-funciona" class="section bg-light">
+        <div class="container section-header center">
+            <span class="section-subtitle">FLUJO OPERATIVO SIMPLE</span>
+            <h2>¿Cómo funciona Trazza en Lima<br>Metropolitana?</h2>
+            <p>Tecnología de enlace directo que sincroniza las rutas habituales de transportistas con envíos puntuales de negocios y talleres.</p>
+            
+            <div class="toggle-container center-toggle">
+                <button class="toggle-btn active"><i class="ph ph-truck"></i> Para Transportistas (Retornos)</button>
+                <button class="toggle-btn"><i class="ph ph-storefront"></i> Para Emprendedores y Mypes</button>
+            </div>
+        </div>
+
+        <div class="container grid-3">
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-num">1</div>
+                    <i class="ph ph-calendar-plus text-blue"></i>
+                </div>
+                <h3>Publica ruta y disponibilidad</h3>
+                <p>Registra tu punto de descarga inicial (ej. almacén en Lurín o Callao) y tu punto final de retorno. Especifica el tonelaje libre y volumen en metros cúbicos de tu unidad.</p>
+                <div class="step-check"><i class="ph ph-check-circle"></i> Toma menos de 45 segundos desde tu celular</div>
+            </div>
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-num">2</div>
+                    <i class="ph ph-radar text-blue"></i>
+                </div>
+                <h3>Recibe alertas de carga por IA</h3>
+                <p>Nuestro algoritmo analiza comercios a lo largo de tu trayecto que necesitan trasladar paquetes o mercadería. Te envía una notificación con la tarifa neta garantizada.</p>
+                <div class="step-check"><i class="ph ph-lightning"></i> Sin desviarte más de 1.8 km de tu ruta matriz</div>
+            </div>
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-num">3</div>
+                    <i class="ph ph-currency-circle-dollar text-green"></i>
+                </div>
+                <h3>Acepta, transporta y cobra</h3>
+                <p>Realiza la recolección, sigue el mapa asistido con telemetría en tiempo real y recibe el abono seguro y directo en tu cuenta bancaria o billetera digital al entregar la carga.</p>
+                <div class="step-check"><i class="ph ph-check-circle"></i> Liquidación inmediata sin comisiones extra</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section id="beneficios" class="section">
+        <div class="container section-header flex-between align-end">
+            <div>
+                <span class="section-subtitle">VENTAJAS COMPETITIVAS</span>
+                <h2 class="max-w-600">Construido para la realidad logística de Lima</h2>
+                <p class="max-w-600 mt-10">Infraestructura digital diseñada para superar la informalidad, el tráfico en arterias clave y los altos costos del flete tradicional.</p>
+            </div>
+            <div class="coverage-badge">
+                <span class="dot"></span> 100% Cobertura Metropolitana
+            </div>
+        </div>
+
+        <div class="container grid-4 mt-40">
+            <div class="feature-card">
+                <div class="feature-icon bg-light-green"><i class="ph ph-piggy-bank"></i></div>
+                <h3>Sin comisión por transacción</h3>
+                <p>Modelo justo: no recortamos tus ganancias de flete ni inflamos sobreprecios artificiales a las microempresas participantes.</p>
+                <a href="#" class="feature-link text-green">Tarifas fijas y transparentes &rarr;</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon bg-light-purple"><i class="ph ph-brain"></i></div>
+                <h3>Motor Matching por IA</h3>
+                <p>Predice ventanas de tiempo y compatibilidad de carga física en minutos para evitar horas perdidas esperando fletes en terminales.</p>
+                <a href="#" class="feature-link text-blue">Algoritmo de proximidad urbana &rarr;</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon bg-light-blue"><i class="ph ph-map-pin"></i></div>
+                <h3>Monitoreo IoT y Satelital</h3>
+                <p>Integración nativa con sensores GPS para visualización en vivo de paradas, tiempos de tráfico y confirmación de llegada por geocercas.</p>
+                <a href="#" class="feature-link text-blue">Seguimiento compartido por WhatsApp &rarr;</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon bg-light-orange"><i class="ph ph-shield-check"></i></div>
+                <h3>Seguridad y Filtro Bilateral</h3>
+                <p>Validación con RENIEC, SUNAT (RUC activo) y antecedentes de choferes. Tu mercancía viaja con transportistas identificados.</p>
+                <a href="#" class="feature-link text-orange">Validación documental completa &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparativa Section -->
+    <section id="comparativa" class="section bg-light">
+        <div class="container section-header center">
+            <span class="section-subtitle">COMPARATIVA TRANSPARENTE</span>
+            <h2>¿Por qué migrar a la logística inteligente de Trazza?</h2>
+            <p>Descubre por qué cientos de conductores y microempresarios de Lima han reemplazado agencias abusivas y grupos de mensajería sin garantías.</p>
+        </div>
+
+        <div class="container mt-40">
+            <div class="table-wrapper">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Criterio Operativo</th>
+                            <th class="trazza-col"><i class="ph-fill ph-lightning"></i> TRAZZA Logística</th>
+                            <th>Agencias Tradicionales</th>
+                            <th>Grupos WhatsApp / Informal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Comisiones e Intermediarios</td>
+                            <td class="trazza-col text-green fw-600">0% comisión directa, tarifa transparente acordada</td>
+                            <td>25% a 40% de retención sobre el viaje</td>
+                            <td class="text-red">Incierto / Cobro discrecional</td>
+                        </tr>
+                        <tr>
+                            <td>Velocidad de Emparejamiento</td>
+                            <td class="trazza-col text-blue fw-600">Inmediato (< 15 min) por geolocalización IA</td>
+                            <td>De 6 a 24 horas hábiles</td>
+                            <td class="text-gray">Variable (horas esperando respuesta)</td>
+                        </tr>
+                        <tr>
+                            <td>Trazabilidad Satelital GPS</td>
+                            <td class="trazza-col text-green fw-600">Telemetría IoT en vivo con link público cliente</td>
+                            <td>Solo llamadas telefónicas al chofer</td>
+                            <td class="text-red">Nula o ubicación manual estática</td>
+                        </tr>
+                        <tr>
+                            <td>Filtros de Seguridad y RUC</td>
+                            <td class="trazza-col text-blue fw-600">Validación SUNAT, SOAT vigente y antecedentes</td>
+                            <td>Validación básica en oficina</td>
+                            <td class="text-red">Cero control (alto riesgo de extravío)</td>
+                        </tr>
+                        <tr>
+                            <td>Compensación de Retorno Vacío</td>
+                            <td class="trazza-col text-green fw-600">Optimización activa del 100% de la ruta de vuelta</td>
+                            <td>Solo asignan flete de ida convencional</td>
+                            <td class="text-gray">Ocasional sin coordinación precisa</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section id="testimonios" class="section">
+        <div class="container section-header center">
+            <span class="section-subtitle">TESTIMONIOS REALES</span>
+            <h2>Casos de éxito en las calles de Lima</h2>
+            <p>Historias reales de transportistas y dueños de negocio que aumentaron su margen de rentabilidad diaria con Trazza.</p>
+        </div>
+
+        <div class="container grid-2 mt-40">
+            <div class="testimonial-card">
+                <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="quote">“Antes descargaba en los almacenes de Lurín a las 11:00 am y regresaba a mi base en San Martín de Porres con la tolva completamente vacía, perdiendo combustible en la Panamericana. Con Trazza recojo lotes industriales de regreso y gano entre S/. 160 y S/. 240 extra cada día.”</p>
+                <div class="testimonial-author">
+                    <div class="author-img avatar-placeholder">CM</div>
+                    <div class="author-info">
+                        <strong>Carlos Mendoza</strong>
+                        <span>Transportista Independiente • Unidad Isuzu 4T</span>
+                        <span class="route">Ruta Frecuente: Lurín || SMP / Los Olivos</span>
+                    </div>
+                    <div class="author-metric">
+                        <strong class="text-green">+S/. 4,200/mes</strong>
+                        <span>Ingreso adicional neto</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                <p class="quote">“En Gamarra los fletes informales nos cobran barbaridades por llevar fardos de tela y confecciones hacia nuestras sucursales en Chorrillos y Villa El Salvador. En Trazza aprovecho los camiones que regresan hacia el sur; reduzco 32% en costos y mis clientes ven el GPS en vivo.”</p>
+                <div class="testimonial-author">
+                    <div class="author-img avatar-placeholder">PG</div>
+                    <div class="author-info">
+                        <strong>Patricia Gómez</strong>
+                        <span>Fundadora de Creaciones D'Gómez • Mype Textil</span>
+                        <span class="route text-orange">Ruta Frecuente: La Victoria (Gamarra) || Chorrillos</span>
+                    </div>
+                    <div class="author-metric">
+                        <strong class="text-orange">-32% Costo</strong>
+                        <span>Ahorro en fletes por lote</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto Section -->
+    <section id="impacto" class="section bg-light">
+        <div class="container impact-container">
+            <div class="impact-content">
+                <div class="eco-badge">
+                    <i class="ph-fill ph-tree-evergreen"></i> Impacto Ambiental y Urbano en Lima
+                </div>
+                <h2>Camiones con tolva completa = Menos congestión y menor huella de carbono</h2>
+                <p>Cada día circulan más de 12,000 vehículos pesados vacíos por la Vía de Evitamiento y la Panamericana. Trazza optimiza el coeficiente de carga urbana, evitando trayectos fantasmas y reduciendo la saturación vehicular en los accesos industriales metropolitanos.</p>
+                
+                <div class="impact-stats">
+                    <div class="impact-stat-box">
+                        <strong class="text-green">-410</strong>
+                        <span>Toneladas CO₂</span>
+                        <small>Mitigadas proyectadas año 2025</small>
+                    </div>
+                    <div class="impact-stat-box">
+                        <strong class="text-blue">34%</strong>
+                        <span>Menos viajes en vacío</span>
+                        <small>En corredores de Lima Sur y Norte</small>
+                    </div>
+                    <div class="impact-stat-box">
+                        <strong class="text-orange">92,000+</strong>
+                        <span>Galones Diésel</span>
+                        <small>Ahorro agregado de combustible</small>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-visual">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <span>Índice de Ocupación Vehicular</span>
+                        <div class="optimal-badge">+88% Óptimo</div>
+                    </div>
+                    <div class="donut-container">
+                        <div class="donut-chart">
+                            <div class="donut-inner">
+                                <strong>75%</strong>
+                                <span>Capacidad<br>Usada</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item"><span class="dot bg-green"></span> Carga Compartida</div>
+                        <div class="legend-item"><span class="dot bg-light-blue"></span> Capacidad Reserva</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-container">
+            <div class="cta-content">
+                <span class="cta-subtitle">SÚMATE HOY A LA RED TRAZZA</span>
+                <h2>Deja de rodar en vacío. Empieza a transportar con rentabilidad garantizada.</h2>
+                <p>Únete a los más de 1,200 choferes y más de 450 empresas que ya están transformando la logística urbana en Lima. Activación en menos de 24 horas.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="registro.html" class="btn btn-white btn-large"><i class="ph ph-truck"></i> Registrar mi Camión</a>
+                <a href="registro.html" class="btn btn-secondary btn-large"><i class="ph ph-package"></i> Enviar Carga sin Contrato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="ph-fill ph-truck"></i>
+                    <div class="logo-text">
+                        <span class="brand">TRAZZA</span>
+                    </div>
+                </div>
+                <p>Conectamos retornos vacíos de transportistas con envíos accesibles para micro y pequeñas empresas en Lima Metropolitana. Menos emisiones, más rentabilidad.</p>
+                <div class="footer-badges">
+                    <span class="badge"><i class="ph ph-leaf"></i> Carbon Neutral Ready</span>
+                    <span class="badge badge-blue"><i class="ph ph-check-circle"></i> Mypes Lima</span>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Soluciones</h4>
+                <h5>PARA TRANSPORTISTAS</h5>
+                <ul>
+                    <li><a href="#">Monetizar Retorno Vacío</a></li>
+                    <li><a href="#">Rutas Disponibles en Lima</a></li>
+                </ul>
+                <h5 class="mt-15">PARA EMPRENDEDORES</h5>
+                <ul>
+                    <li><a href="#">Carga Compartida Mype</a></li>
+                    <li><a href="#">Cotizador Inmediato</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Marco Legal</h4>
+                <ul>
+                    <li><a href="#">Términos y Condiciones de Uso</a></li>
+                    <li><a href="#">Política de Privacidad de Datos</a></li>
+                    <li><a href="#">Seguro y Cobertura de Mercancía</a></li>
+                    <li><a href="#">Libro de Reclamaciones Virtual</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto Lima</h4>
+                <ul>
+                    <li><i class="ph ph-map-pin"></i> Av. Tomás Marsano 2875, Surquillo, Lima 15048, Perú</li>
+                    <li><i class="ph ph-envelope"></i> operaciones@trazza.pe</li>
+                    <li><i class="ph ph-phone"></i> +51 (01) 748-3920</li>
+                    <li><i class="ph ph-clock"></i> Lun - Sáb: 06:00 - 20:00 (Soporte en ruta)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Trazza Logística Perú S.A.C. Todos los derechos reservados. RUC 0000000000.</p>
+            <p>Optimización de carga urbana y compensación de huella de carbono.</p>
+        </div>
+    </footer>
+
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

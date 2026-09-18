@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - Trazza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body class="auth-page">
+
+    <div class="auth-card">
+        <div class="auth-header">
+            <a href="index.html" class="logo">
+                <i class="ph-fill ph-truck"></i>
+                <div class="logo-text">
+                    <span class="brand">TRAZZA</span>
+                </div>
+            </a>
+            <h2>Crea tu cuenta</h2>
+            <p>Únete a la red logística inteligente</p>
+        </div>
+
+        <div class="toggle-container auth-role-toggle">
+            <button class="toggle-btn active" id="btn-transportista"><i class="ph ph-truck"></i> Transportista</button>
+            <button class="toggle-btn" id="btn-emprendedor"><i class="ph ph-storefront"></i> Emprendedor</button>
+        </div>
+
+        <form class="auth-form" action="index.html">
+            <div class="form-group">
+                <label for="name">Nombre o Razón Social</label>
+                <input type="text" id="name" class="form-input" placeholder="Ej. Logística SAC" required>
+            </div>
+            <div class="form-group">
+                <label for="doc">RUC o DNI</label>
+                <input type="text" id="doc" class="form-input" placeholder="Ingresa tu documento" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" class="form-input" placeholder="tu@correo.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large" style="width: 100%; margin-top: 8px;">Registrarse</button>
+        </form>
+
+        <div class="auth-footer">
+            ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+        </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
